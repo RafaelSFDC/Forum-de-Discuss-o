@@ -4,4 +4,4 @@ Projeto para um simples fórum.
 
 ## Projeto
 
-- [Link do projeto](https://github.com/jsx-eslint/eslint-plugin-react)
+- [Link do projeto](https://forum-de-discussao.vercel.app/)
