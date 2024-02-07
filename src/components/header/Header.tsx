@@ -10,16 +10,15 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { useSnapshot } from "valtio";
-import LoginDialog from "../dialogs/LoginDialog";
 import { state } from "@/store";
-import RegisterDialog from "../dialogs/RegisterDialog";
 
 const Header = () => {
   useSnapshot(state);
   return (
     <header className="bg-primary px-4 py-2 flex justify-between min-h-14">
       <div className="text-white text-lg font-bold flex items-center gap-2 flex-1">
-        <AiFillMessage className="text-2xl" /> Forum App
+        <AiFillMessage className="text-2xl" />
+        Forum App
       </div>
       <nav className="flex items-center flex-1 justify-center">
         <ul className="flex gap-8 text-white  font-medium items-center">
@@ -78,11 +77,17 @@ const Header = () => {
         </div>
       ) : (
         <div className="flex gap-4 font-medium  justify-end  items-center flex-1">
-          <div className="text-white cursor-pointer">
-            <LoginDialog />
+          <div
+            className="text-white cursor-pointer"
+            onClick={() => (state.modalLogin = true)}
+          >
+            Login
           </div>
-          <div className="text-white cursor-pointer">
-            <RegisterDialog />
+          <div
+            className="text-white cursor-pointer"
+            onClick={() => (state.modalRegister = true)}
+          >
+            Criar Conta
           </div>
         </div>
       )}
