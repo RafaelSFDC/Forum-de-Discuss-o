@@ -1,3 +1,9 @@
 {
-  "conventionalCommits.scopes": ["Setup", "Css", "Feature Setup", "New Feature"]
+  "conventionalCommits.scopes": [
+    "Setup",
+    "Css",
+    "Feature Setup",
+    "New Feature",
+    "ReadMe"
+  ]
 }
