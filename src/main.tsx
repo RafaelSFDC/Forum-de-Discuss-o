@@ -5,12 +5,29 @@ import "./globals.css";
 
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import ErrorPage from "./pages/Error.tsx";
+import Home from "./pages/Home.tsx";
+import Users from "./pages/Users.tsx";
+import Posts from "./pages/Posts.tsx";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <App />,
     errorElement: <ErrorPage />,
+    children: [
+      {
+        path: "/",
+        element: <Home />,
+      },
+      {
+        path: "/users",
+        element: <Users />,
+      },
+      {
+        path: "/posts/*",
+        element: <Posts />,
+      },
+    ],
   },
 ]);
 
