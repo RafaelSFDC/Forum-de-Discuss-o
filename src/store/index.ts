@@ -6,4 +6,5 @@ export const state = proxy({
   modalLogin: false,
   modalRegister: false,
   modalRecovery: false,
+  mainUrl: "http://localhost:8000/api/v1",
 });
