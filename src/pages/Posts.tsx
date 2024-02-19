@@ -93,7 +93,7 @@ const Posts = () => {
         ))}
       </ul>
 
-      <div className="flex gap-4 bg-white w-full px-4 rounded-md shadow-sm  flex-1  items-center justify-center py-4">
+      <div className="flex gap-4 bg-white w-full px-4 rounded-md shadow-sm   items-center justify-center py-4">
         {snap.logged ? (
           <Form {...form}>
             <form
