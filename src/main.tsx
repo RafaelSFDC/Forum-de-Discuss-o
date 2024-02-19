@@ -27,7 +27,7 @@ const router = createBrowserRouter([
         element: <Users />,
       },
       {
-        path: "/posts/*",
+        path: "/:id",
         element: <Posts />,
       },
     ],

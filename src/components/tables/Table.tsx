@@ -78,7 +78,7 @@ export function DataTable<TData, TValue>({
   const navigate = useNavigate();
 
   return (
-    <div className="overflow-auto max-h-[calc(100vh-200px)] flex-1">
+    <div className="  flex-1">
       <div className="flex items-center py-4 gap-4">
         <Input
           placeholder="Filtrar pelo Titulo..."
@@ -118,8 +118,8 @@ export function DataTable<TData, TValue>({
           </DropdownMenuContent>
         </DropdownMenu>
       </div>
-      <div className="rounded-md border overflow-auto">
-        <Table className="overflow-auto">
+      <div className="rounded-md border">
+        <Table>
           <TableHeader className="bg-[#2F4858] text-white ">
             {table.getHeaderGroups().map((headerGroup) => (
               <TableRow key={headerGroup.id}>
@@ -138,7 +138,7 @@ export function DataTable<TData, TValue>({
               </TableRow>
             ))}
           </TableHeader>
-          <TableBody className="overflow-auto">
+          <TableBody>
             {table.getRowModel().rows?.length ? (
               table.getRowModel().rows.map((row) => (
                 <TableRow
@@ -150,9 +150,9 @@ export function DataTable<TData, TValue>({
                       key={cell.id}
                       onClick={(e) => {
                         if (e.ctrlKey) {
-                          window.open(`/posts/${row.original.id}`, "_blank");
+                          window.open(`/${row.original.id}`, "_blank");
                         } else {
-                          navigate(`/posts/${row.original.id}`);
+                          navigate(`/${row.original.id}`);
                         }
                       }}
                       className="cursor-pointer"

@@ -1,7 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { state } from "@/store";
-export const useQueryPost = ({ id }: { id: number }) => {
+export const useQueryPost = ({ id }: { id: number | string }) => {
   const url = "posts";
   return useQuery({
     queryKey: ["post"],

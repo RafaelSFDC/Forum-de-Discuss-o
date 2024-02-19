@@ -7,6 +7,7 @@ export interface Posts {
   userId: number;
   userName: string;
   category: number;
+  user: User;
   comments: Comments[];
 }
 
@@ -20,4 +21,20 @@ export interface Comments {
   description: string;
   category: string;
   postId: number;
+  user: User;
+  createdAt: Date;
+}
+
+export interface Categories {
+  id: number;
+  content: string;
+}
+
+export interface User {
+  id: number;
+  username: string;
+  email: string;
+  image: string;
+  role: string;
+  category: number;
 }
